@@ -11,8 +11,41 @@ h1{
   position: absolute;
   color: rgb(29, 100, 231);
   text-align: center;
-  /* left: 15%;*/
+  left: 30%;
   top: 20%;
   font-family: 'Mulish-BoldItalic';
   font-size: 80px;
+}
+form{
+  background-color: rgb(148, 153, 158);
+  opacity: 80%;
+  border-radius: 10%;
+  left: 32%;
+  max-width: 35%;
+  height: 50%;
+  position: absolute;
+  color: rgb(29, 100, 231);
+  top: 40%;
+  font-family: 'Mulish-BoldItalic';
+  font-size: 80px;
+  text-align: center;
+}
+form .coluna_container{
+  padding: 4% 5% 0 5%;
+}
+p{
+  font-size: 30px;
+  margin-bottom: 0%;
+  padding-top: 5%;
+}
+input{
+  font-size: 30%;
+  max-width: 100%;
+}
+button{
+  width: 70%;
+}
+#cont{
+  padding: 0%;
+  color: none;
 }

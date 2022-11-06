@@ -8,17 +8,107 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="container-fluid p-5 bg-primary text-white text-center" id="video">
-      <!-- <img src="../../assets/fundoHome.gif"> -->
+    <div
+      class="container-fluid p-5 bg-primary text-white text-center"
+      id="video"
+    >
+      <img src="../../assets/fundoHome.gif" />
       <!-- <video autoplay muted>
         <source src="../../assets/fundoHome.mp4" type="video/gif">
       </video> -->
-      <h1>Você está seguro dos<br> <br>imprevistos?</h1>
+      <h1>
+        Você está seguro dos<br />
+        <br /><br />imprevistos?
+      </h1>
+      <form [formGroup]="searchForm">
+        <div>
+          <mat-card class="mat-elevation-z2" id="cont">
+            <input
+              type="text"
+              size="30"
+              placeholder="Insira o nome"
+              pInputText
+              name="name"
+            />
+          </mat-card>
+          <mat-card class="mat-elevation-z2" id="cont">
+            <input
+              type="text"
+              size="30"
+              placeholder="Insira o telefone"
+              pInputText
+              name="phoneNumber"
+            />
+          </mat-card>
+          <mat-card class="mat-elevation-z2" id="cont">
+            <input
+              type="email"
+              size="30"
+              placeholder="Insira o email"
+              pInputText
+              name="email"
+            />
+          </mat-card>
+        </div>
+
+        <div class="coluna_container">
+          <div fxLayout="column" fxFlex="50%">
+            <mat-card class="mat-elevation-z2">
+              <mat-card-content>
+                <h5><b>Cultura</b></h5>
+              </mat-card-content>
+              <mat-card-content>
+                <mat-select
+                  matInput
+                  placeholder="Escolha a cultura desejada"
+                  formControlName="culture"
+                >
+                  <mat-option
+                    *ngFor="let option of cultures"
+                    [value]="option.id"
+                  >
+                    {{ option.cultura }}
+                  </mat-option>
+                </mat-select>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+        <div class="coluna_container">
+          <div fxLayout="column" fxFlex="50%">
+            <mat-card class="mat-elevation-z2">
+              <mat-card-content>
+                <h5><b>Cidade</b></h5>
+              </mat-card-content>
+              <mat-card-content>
+                <mat-select
+                  matInput
+                  placeholder="Escolha a cultura desejada"
+                  formControlName="city"
+                >
+                  <mat-option
+                    *ngFor="let option of city"
+                    [value]="option.IBGE7"
+                  >
+                    {{ option.Municipio }} - {{ option.UF }}
+                  </mat-option>
+                </mat-select>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+        <button mat-raised-button class="custom-raised-button-2" (click)="search()">
+          BUSCAR USUÁRIO
+        </button>
+      </form>
     </div>
 
     <!-- <div class="container mt-5">

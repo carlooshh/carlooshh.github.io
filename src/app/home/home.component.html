@@ -1,47 +1,63 @@
 <div class="main-container">
- <mat-card>
-    <mat-card-content>
+  <div class="header-container">
+  <span><h1><b>Você está seguro da produção da sua lavoura?</b></h1></span><br>
+  <span><h5>Descubra o quanto você está sujeito a perder da sua produção</h5></span>
+  </div>
+    <button
+        mat-raised-button
+        color="primary"
+        id="buton_simule"
+        (click)="scrollForm()"
+      >
+        SIMULE AQUI
+      </button>
+  <mat-card-content class="box" id="container_carrosel_title">
+    <mat-card id="container_carrosel">
+      <div class="card-title">
+        <h2><b>PLATAFORMA DAS TRÊS PONTAS DO NEGÓCIO</b></h2>
+        <p>Fale com a corretora e a seguradora de forma rápida, digital e em um só lugar.</p>
+      </div>
+    </mat-card>
+    <mat-card id="container_carrosel">
+      <div class="card-title">
+        <h2><b>PLATAFORMA INTEGRADA AO WHATSAPP</b></h2>
+        <p>Transparência! Seja notificado em tempo real e saiba tudo seu contrato.</p>
+      </div>
+    </mat-card><mat-card id="container_carrosel">
+      <div class="card-title">
+        <h2><b>EMISSÃO DE BOLETOS</b></h2>
+        <p>Ligar para solicitar boletos? Nunca mais! Emita sozinho.</p>
+      </div>
+    </mat-card>
 
-      <form [formGroup]="searchForm">
-        <mat-form-field appearance="outline">
-          <mat-label >Insira seu Nome</mat-label>
-          <input
-            matInput
-            required
-            formControlName="name"
-          />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label >Insira seu Telefone</mat-label>
-          <input
-            matInput
-            required
-            formControlName="phoneNumber"
-          />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label >Insira seu Email</mat-label>
-          <input
-            matInput
-            required
-            formControlName="email"
-          />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label >Escolha a Cultura:</mat-label>
+  </mat-card-content>
+</div>
+<div class="main-container-two" id="formSearch">
+  <span><h1 style="color:#959c2c; font-size: 35px;"><b>Preencha o formulário para calcularmos os riscos</b></h1></span><br><br><br>
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="searchForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Insira seu Nome</mat-label>
+        <input matInput required formControlName="name" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Insira seu Telefone</mat-label>
+        <input matInput required formControlName="phoneNumber" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Insira seu Email</mat-label>
+        <input matInput required formControlName="email" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Escolha a Cultura:</mat-label>
         <div class="coluna_container">
           <div fxLayout="column" fxFlex="50%">
-                <mat-select
-                  matInput
-                  formControlName="culture"
-                >
-                  <mat-option
-                    *ngFor="let option of cultures"
-                    [value]="option.id"
-                  >
-                    {{ option.cultura }}
-                  </mat-option>
-                </mat-select>
+            <mat-select matInput formControlName="culture">
+              <mat-option *ngFor="let option of cultures" [value]="option.id">
+                {{ option.cultura }}
+              </mat-option>
+            </mat-select>
           </div>
         </div>
       </mat-form-field>
@@ -49,22 +65,25 @@
         <mat-label appearance="outline">Escolha a Cidade</mat-label>
         <div class="coluna_container">
           <div fxLayout="column" fxFlex="50%">
-                <mat-select
-                  matInput
-                  formControlName="city"
-                >
-                  <mat-option
-                    *ngFor="let option of city"
-                    [value]="option.IBGE7"
-                  >
-                    {{ option.Municipio }} - {{ option.UF }}
-                  </mat-option>
-                </mat-select>
+            <mat-select matInput formControlName="city">
+              <mat-option *ngFor="let option of city" [value]="option.IBGE7">
+                {{ option.Municipio }} - {{ option.UF }}
+              </mat-option>
+            </mat-select>
           </div>
         </div>
       </mat-form-field>
-      <button mat-raised-button color="primary" type="submit" (click)="search()">Buscar</button>
-      </form>
-    </mat-card-content>
-  </mat-card>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="search()"
+        style="width: 70%; height: 35%;"
+      >
+        Buscar
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
 </div>
+<footer><h1 style="font-size: 35px; font-family: sans-serif;margin-bottom: 3%;">Seu tempo vale dinheiro!</h1></footer>

@@ -31,19 +31,13 @@ export class HomeComponent implements OnInit {
   }
 
   search(){
-    console.log('nome-> '+ this.searchForm.controls['name'].value);
-    console.log('phoneNumber-> '+ this.searchForm.controls['phoneNumber'].value);
-    console.log('email-> '+ this.searchForm.controls['email'].value);
-    console.log('culture-> '+ this.searchForm.controls['culture'].value);
-    console.log('culture-> '+ this.searchForm.controls['city'].value);
     let resp = this.embrapaService.getRisks(this.searchForm.controls['culture'].value,this.searchForm.controls['city'].value)
-    console.log('sem data: '+resp);
-    console.log('com data: '+Object.values(resp));
-
   }
   ngOnInit(): void {
     localStorage.setItem('users', JSON.stringify(users));
   }
-
-  goToLogin() {}
+  scrollForm(){
+    const element = document.getElementById('formSearch');
+    element?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
 }

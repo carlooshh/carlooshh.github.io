@@ -1,28 +1,73 @@
 .ngx-datatable.scroll-vertical{height:70vh;}
 
+.list-contracts{
+    padding: 8px 16px 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    flex-wrap: wrap;
+}
+
+
+.list-background{
+    background-color: #e3e3e3;
+    margin: 8px 80px 80px 20px;
+
+}
+
+.ngx-datatable.material {
+    box-shadow: none;
+    border: 1px solid #e3e3e3;
+  }
 
 .card-contract{
-    width: 350px;
+    height: auto;
+    background-color: #ffffff;
+    width: 48%;
     padding: 8px;
-    border: 1px solid #b7b7b7;
+    border: 1px solid #d2d2d2;
     border-top: 4px solid rgb(180, 20, 20);
     border-bottom: 2px solid #a9a9a9;
-    background-color: #ffffff;
+    margin-bottom: 20px;
+    /* background-color: #ffffff; */
+}
+
+.contract-body{
+    border: 1px solid rgb(0, 0, 149);
+    border-radius: 2px;
+    padding: 8px 6px 0px 6px;
+    border-bottom: none;
+}
+
+.insurance-company-data{
+    margin-top: 12px;
+    border: 1px solid rgb(195, 0, 0);
+    border-radius: 2px;
+    padding: 8px 6px 0px 6px;
+    border-bottom: none;
+}
+
+.proposal-data{
+    margin-top: 12px;
+    border: 1px solid rgb(0, 86, 0);
+    border-radius: 2px;
+    padding: 8px 6px 0px 6px;
 }
 
 .card-title{
     display: flex;
     justify-content: center;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
     font-family: 'Times New Roman';
-    padding-bottom: 8px;
+    padding-bottom: 25px;
 }
 
 .card-subtitle{
-    font-size: 16px;
+    font-size: 15.5px;
     font-weight: 500;
-    padding-bottom: 6px;
+    padding-bottom: 12px;
 }
 
 .card-contratante{
@@ -34,18 +79,19 @@
 }
 
 .contratante-bold{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
 }
 
 .action-buttons{
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 14px;
+    margin-left: -7px;
+    margin-right: -7px;
 }
 
 .row{
     margin: 8px;
-    background-color: #e3e3e3;
+    background-color: #ffffff;
 }
 
 .see-contract{
@@ -66,9 +112,9 @@
 
 .accept-contract{
     width: 99%;
-    margin-right: 1.5px;
     height: 30px;
     color: white;
+    border: 1px solid rgb(0, 86, 0);
     background-color: rgb(0, 86, 0);
     height: 32px;
     font-weight: 600;
@@ -76,11 +122,11 @@
 }
 
 .recuse-contract{
-    width: 99%;
-    margin-left: 1.5px;
+    width: 100%;
     height: 30px;
     color: white;
     background-color: rgb(195, 0, 0);
+    border: 1px solid rgb(195, 0, 0);
     height: 32px;
     font-weight: 600;
     font-size: 14px;

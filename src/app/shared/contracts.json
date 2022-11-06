@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "title" : "CONTRATO DE COMPRA E VENDA DE MILHO",
+        "status" : 2,
+        "contratanteText" : "João Carlos Silva, brasileiro(a), carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no CEP 38021976, na cidade de Uberaba",
+        "contratadaText" : "Rafael Andrade Santos, brasileiro(a), carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no CEP 38071934, na cidade de Uberaba",
+        "contractId" : 1,
+        "seguradoraName" : "Porto Seguros",
+        "seguradoraPhone" : "0800 3587-9614",
+        "signDate" : "06/11/2022",
+        "seguradoraId" : 1,
+        "proposalValue" : "R$ 6784,00",
+        "proposalPeriod" : "Março/2023",
+        "expand": true,
+        "proposalPercent" : "40%"
+    },
+
+    {
+        "id": 2,
+        "title" : "CONTRATO DE COMPRA E VENDA DE CAFÉ",
+        "status" : 3,
+        "contratanteText" : "José Ricardo Magalhães, brasileiro(a), carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no CEP 38021976, na cidade de Patos de Minas",
+        "contratadaText" : "Gabriel Marques Medina, brasileiro(a), carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no CEP 38071934, na cidade de Bambuí",
+        "contractId" : 1,
+        "seguradoraName" : "Pottencial Seguradora",
+        "seguradoraPhone" : "0800 3587-9614",
+        "signDate" : "14/07/2022",
+        "seguradoraId" : 1,
+        "proposalValue" : "R$ 4742,00",
+        "proposalPeriod" : "Outubro/2023",
+        "expand": true,
+        "proposalPercent" : "30%"
+    },
+
+    {
+        "id": 3,
+        "title" : "CONTRATO DE COMPRA E VENDA DE SOJA",
+        "status" : 1,
+        "contratanteText" : "Carlos Eduardo Martins, brasileiro(a), carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no CEP 38021976, na cidade de Uberaba",
+        "contratadaText" : "Elisete Marques Ribeiro, brasileiro(a), carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no CEP 38071934, na cidade de Uberaba",
+        "contractId" : 1,
+        "seguradoraName" : "BMG Seguros",
+        "seguradoraPhone" : "0800 3587-9614",
+        "signDate" : "24/01/2022",
+        "seguradoraId" : 1,
+        "proposalValue" : "R$ 12.475,00",
+        "proposalPeriod" : "janeiro/2023",
+        "expand": true,
+        "proposalPercent" : "20%"
+    },
+
+    {
+        "id": 4,
+        "title" : "CONTRATO DE COMPRA E VENDA DE SORGO",
+        "status" : 3,
+        "contratanteText" : "Thiago Rodovaldo Fonseca, brasileiro(a), carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no CEP 38021976, na cidade de Uberaba",
+        "contratadaText" : "Sebastião Contarin da Silva, brasileiro(a), carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no CEP 38071934, na cidade de Uberaba",
+        "contractId" : 1,
+        "seguradoraName" : "Berkley Brasil Seguros",
+        "seguradoraPhone" : "0800 3587-9614",
+        "signDate" : "08/11/2021",
+        "seguradoraId" : 1,
+        "proposalValue" : "R$ 6784,00",
+        "proposalPeriod" : "Dezembro/2022",
+        "expand": false,
+        "proposalPercent" : "50%"
+    }
+]

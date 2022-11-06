@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { PageLayoutComponent } from './pages/page-layout/page-layout.component';
 import { ContractsListComponent } from './pages/contracts/contracts-list/contracts-list.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 
 @NgModule({
   declarations: [AppComponent, PageLayoutComponent, ContractsListComponent],
@@ -14,6 +16,7 @@ import { ContractsListComponent } from './pages/contracts/contracts-list/contrac
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxDatatableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

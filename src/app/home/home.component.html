@@ -1,0 +1,52 @@
+<div class="main-container">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="searchForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Insira seu Nome</mat-label>
+          <input matInput required formControlName="name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira seu Telefone</mat-label>
+          <input matInput required formControlName="phoneNumber" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira seu Email</mat-label>
+          <input matInput required formControlName="email" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Escolha a Cultura:</mat-label>
+          <div class="coluna_container">
+            <div fxLayout="column" fxFlex="50%">
+              <mat-select matInput formControlName="culture">
+                <mat-option *ngFor="let option of cultures" [value]="option.id">
+                  {{ option.cultura }}
+                </mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label appearance="outline">Escolha a Cidade</mat-label>
+          <div class="coluna_container">
+            <div fxLayout="column" fxFlex="50%">
+              <mat-select matInput formControlName="city">
+                <mat-option *ngFor="let option of city" [value]="option.IBGE7">
+                  {{ option.Municipio }} - {{ option.UF }}
+                </mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          (click)="search()"
+        >
+          Buscar
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

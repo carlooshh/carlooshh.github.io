@@ -1,0 +1,45 @@
+<div class="main-container">
+  <mat-card>
+    <div class="mat-card-header-container">
+      <img src="../../assets/images/logo-granto.svg" alt="" />
+    </div>
+    <div style="display: flex">Sistema de gerenciamento de contratos</div>
+
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Email"
+            required
+            formControlName="email"
+          />
+          <mat-error *ngIf="loginForm.get('email')?.hasError">
+            Email é obrigatório
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="Senha"
+            required
+            formControlName="password"
+          />
+          <mat-error *ngIf="loginForm.get('password')?.hasError">
+            Senha é obrigatória
+          </mat-error>
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="this.loginForm.invalid"
+        >
+          Cadastrar
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

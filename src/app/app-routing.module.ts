@@ -15,10 +15,6 @@ const routes: Routes = [
   {
     path: 'list-contracts',
     component: ContractsListComponent,
-  },
-  {
-    path: 'list-contracts',
-    component: ContractsListComponent,
   }
 ];
 

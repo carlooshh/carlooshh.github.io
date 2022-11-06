@@ -4,9 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { PageLayoutComponent } from './pages/page-layout/page-layout.component';
+import { ContractsListComponent } from './pages/contracts/contracts-list/contracts-list.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PageLayoutComponent, ContractsListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,4 +1,5 @@
 img{
+  display: flex;
   max-width: 100%;
   max-height: 100%;
 }
@@ -8,15 +9,18 @@ img{
   text-align: center;
 }
 h1{
+  display: flex;
   position: absolute;
   color: rgb(29, 100, 231);
   text-align: center;
-  left: 30%;
-  top: 20%;
+  top: 10%;
   font-family: 'Mulish-BoldItalic';
   font-size: 80px;
+  justify-content: center;
 }
 form{
+  display: flex;
+  flex-direction: column;
   background-color: rgb(148, 153, 158);
   opacity: 80%;
   border-radius: 10%;
@@ -25,10 +29,10 @@ form{
   height: 50%;
   position: absolute;
   color: rgb(29, 100, 231);
-  top: 40%;
+  top: 30%;
   font-family: 'Mulish-BoldItalic';
   font-size: 80px;
-  text-align: center;
+  justify-content: center;
 }
 form .coluna_container{
   padding: 4% 5% 0 5%;
@@ -44,8 +48,10 @@ input{
 }
 button{
   width: 70%;
+  height: 10%;
 }
 #cont{
   padding: 0%;
   color: none;
 }
+

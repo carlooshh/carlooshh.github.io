@@ -1,18 +1,50 @@
-img{
-  max-width: 100%;
-  max-height: 100%;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #240b5b;
 }
-#video{
-  padding: 0;
-  position: relative;
-  text-align: center;
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
 }
-h1{
-  position: absolute;
-  color: rgb(29, 100, 231);
-  text-align: center;
-  /* left: 15%;*/
-  top: 20%;
-  font-family: 'Mulish-BoldItalic';
-  font-size: 80px;
+
+mat-form-field {
+  width: 100%;
+  width: 400px;
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  height: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coluna_container{
+  max-width: 95%;
+  padding: 0%;
+  justify-content: center;
+  width: 100%;
+  padding: 0%;
+}
+h3{
+  justify-content: start;
 }

@@ -1,66 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Ubuntu"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div
-      class="container-fluid p-5 bg-primary text-white text-center"
-      id="video"
-    >
-      <!-- <img src="../../assets/fundoHome.gif"> -->
-      <!-- <video autoplay muted>
-        <source src="../../assets/fundoHome.mp4" type="video/gif">
-      </video> -->
-      <h1>
-        Você está seguro dos<br />
-        <br />imprevistos?
-      </h1>
-    </div>
+<div class="main-container">
+ <mat-card>
+    <mat-card-content>
 
-    <button mat-raised-button color="primary" [routerLink]="['/login']">
-      IR PRA LOGIN
-    </button>
-
-    <!-- <div class="container mt-5">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Column 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris...
-          </p>
+      <form [formGroup]="searchForm">
+        <mat-form-field appearance="outline">
+          <mat-label >Insira seu Nome</mat-label>
+          <input
+            matInput
+            required
+            formControlName="name"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label >Insira seu Telefone</mat-label>
+          <input
+            matInput
+            required
+            formControlName="phoneNumber"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label >Insira seu Email</mat-label>
+          <input
+            matInput
+            required
+            formControlName="email"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label >Escolha a Cultura:</mat-label>
+        <div class="coluna_container">
+          <div fxLayout="column" fxFlex="50%">
+                <mat-select
+                  matInput
+                  formControlName="culture"
+                >
+                  <mat-option
+                    *ngFor="let option of cultures"
+                    [value]="option.id"
+                  >
+                    {{ option.cultura }}
+                  </mat-option>
+                </mat-select>
+          </div>
         </div>
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris...
-          </p>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label appearance="outline">Escolha a Cidade</mat-label>
+        <div class="coluna_container">
+          <div fxLayout="column" fxFlex="50%">
+                <mat-select
+                  matInput
+                  formControlName="city"
+                >
+                  <mat-option
+                    *ngFor="let option of city"
+                    [value]="option.IBGE7"
+                  >
+                    {{ option.Municipio }} - {{ option.UF }}
+                  </mat-option>
+                </mat-select>
+          </div>
         </div>
-        <div class="col-sm-4">
-          <h3>Column 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris...
-          </p>
-        </div>
-      </div>
-    </div> -->
-  </body>
-</html>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" (click)="search()">Buscar</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

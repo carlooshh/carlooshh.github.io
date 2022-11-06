@@ -34,56 +34,130 @@
 </div>
 <div class="main-container-two" id="formSearch">
   <span><h1 style="color:#959c2c; font-size: 35px;"><b>Preencha o formulário para calcularmos os riscos</b></h1></span><br><br><br>
-<mat-card>
-  <mat-card-content>
-    <form [formGroup]="searchForm">
-      <mat-form-field appearance="outline">
-        <mat-label>Insira seu Nome</mat-label>
-        <input matInput required formControlName="name" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Insira seu Telefone</mat-label>
-        <input matInput required formControlName="phoneNumber" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Insira seu Email</mat-label>
-        <input matInput required formControlName="email" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Escolha a Cultura:</mat-label>
-        <div class="coluna_container">
-          <div fxLayout="column" fxFlex="50%">
-            <mat-select matInput formControlName="culture">
-              <mat-option *ngFor="let option of cultures" [value]="option.id">
-                {{ option.cultura }}
-              </mat-option>
-            </mat-select>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <mat-card *ngIf="!isLoading && riskResult.length == 0">
+    <mat-card-content>
+      <form [formGroup]="searchForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Insira seu Nome</mat-label>
+          <input matInput required formControlName="name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira seu Telefone</mat-label>
+          <input matInput required formControlName="phoneNumber" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Insira seu Email</mat-label>
+          <input matInput required formControlName="email" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Escolha a Cultura:</mat-label>
+          <div class="coluna_container">
+            <div fxLayout="column" fxFlex="50%">
+              <mat-select matInput formControlName="culture">
+                <mat-option *ngFor="let option of cultures" [value]="option.id">
+                  {{ option.cultura }}
+                </mat-option>
+              </mat-select>
+            </div>
           </div>
-        </div>
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label appearance="outline">Escolha a Cidade</mat-label>
-        <div class="coluna_container">
-          <div fxLayout="column" fxFlex="50%">
-            <mat-select matInput formControlName="city">
-              <mat-option *ngFor="let option of city" [value]="option.IBGE7">
-                {{ option.Municipio }} - {{ option.UF }}
-              </mat-option>
-            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label appearance="outline">Escolha a Cidade</mat-label>
+          <div class="coluna_container">
+            <div fxLayout="column" fxFlex="50%">
+              <mat-select matInput formControlName="city">
+                <mat-option *ngFor="let option of city" [value]="option.IBGE7">
+                  {{ option.Municipio }} - {{ option.UF }}
+                </mat-option>
+              </mat-select>
+            </div>
           </div>
-        </div>
-      </mat-form-field>
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          (click)="search()"
+        >
+          Buscar
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card *ngIf="riskResult.length > 0">
+    <div class="risk-data">Dados de risco climático</div>
+    <mat-card-content>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 24px;
+          font-size: 24px;
+        "
+      >
+        Risco
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 12px;
+          font-size: 36px;
+          color: red;
+        "
+        class="risk-data"
+      >
+        20%
+      </div>
+
+      <div class="risk-data-label" style="padding-top: 12px">
+        Cultura:
+        <span class="risk-data-content">{{ riskResult[0].cultura }}</span>
+      </div>
+      <div class="risk-data-label">
+        Municipio:
+        <span class="risk-data-content"> {{ riskResult[0].municipio }}</span>
+      </div>
+      <div class="risk-data-label">
+        Solo: <span class="risk-data-content"> {{ riskResult[0].solo }}</span>
+      </div>
+      <div class="risk-data-label">
+        Safra:
+        <span class="risk-data-content"
+          >{{ riskResult[0].safraIni }}/{{ riskResult[0].safraFim }}</span
+        >
+      </div>
+
+      <div class="risk-data-info">
+        Informação baseada no risco de insucesso do empreendimento preenchido
+        para riscos de 20%, 30% ou 40%.
+      </div>
+      <div></div>
+    </mat-card-content>
+    <div>
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/login']"
+        (click)="goToLogin()"
+      >
+        Seja assegurado
+      </button>
+
       <button
         mat-raised-button
         color="primary"
         type="submit"
-        (click)="search()"
-        style="width: 70%; height: 35%;"
+        style="margin-left: 8px"
+        (click)="goWhatsapp()"
       >
-        Buscar
+        Solicitar atendimento
       </button>
-    </form>
-  </mat-card-content>
-</mat-card>
+    </div>
+  </mat-card>
 </div>
 <footer><h1 style="font-size: 35px; font-family: sans-serif;margin-bottom: 3%;">Seu tempo vale dinheiro!</h1></footer>

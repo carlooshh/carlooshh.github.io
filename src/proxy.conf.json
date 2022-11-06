@@ -1,0 +1,8 @@
+{
+  "/echo": {
+    "target": "https://api.cnptia.embrapa.br/agritec/v1",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

@@ -18,7 +18,7 @@ export class EmbrapaService {
       },
     };
     return this.http
-      .get('https://api.cnptia.embrapa.br/agritec/v1/culturas', options)
+      .get('echo/culturas', options)
       .toPromise()
       .then((res) => {
         console.log(res);

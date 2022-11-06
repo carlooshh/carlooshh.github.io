@@ -1,8 +1,7 @@
-.coluna_container{
-  text-align: center;
+.coluna_container {
   width: 100%;
 }
-.coluna_container mat-card{
+.coluna_container mat-card {
   margin: 2%;
 }
 .main-container {
@@ -11,7 +10,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('src/assets/fundoHome.jpg');
+  background-image: url("src/assets/fundoHome.jpg");
   background-size: cover;
 }
 .main-container-two {
@@ -77,19 +76,19 @@ h3 {
   flex: 1 1 160px;
   margin-bottom: 3%;
 }
-#container_carrosel_title{
+#container_carrosel_title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-#container_carrosel{
+#container_carrosel {
   margin: 2%;
   opacity: 90%;
   height: 100px;
   background-color: white;
 }
-footer{
+footer {
   height: 5%;
   text-align: center;
   font: 1em sans-serif;
@@ -102,20 +101,20 @@ footer h1 {
   color: #959c2c;
   font-size: 30px;
 }
-span{
+span {
   justify-content: start;
-  font-family: sans-serif;
-  color:#ffffff;
+  color: #ffffff;
+  font-family: "Mulish";
   border: #240b5b;
 }
-span h1{
+span h1 {
   color: #331e1e;
   font-size: 60px;
 }
-span h5{
+span h5 {
   font-size: 40px;
 }
-#buton_simule{
+#buton_simule {
   top: 2%;
   margin: 13%;
   margin-top: 5%;
@@ -127,14 +126,14 @@ span h5{
   font-size: 45px;
 }
 
-#buton_simule:hover{
+#buton_simule:hover {
   background-color: #442e2e;
 }
-h2{
+h2 {
   color: #959c2c;
   text-align: center;
 }
-p{
+p {
   font-size: 18px;
   text-align: center;
   color: #959c2c;
@@ -142,9 +141,6 @@ p{
 /* h1{
   color: black;
 } */
-
-
-
 
 .risk-data {
   font-family: "Mulish";

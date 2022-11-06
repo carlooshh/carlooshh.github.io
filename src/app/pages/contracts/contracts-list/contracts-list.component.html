@@ -1,0 +1,178 @@
+<div class="row">
+    <!-- column -->
+    <div class="card">
+        <div class="card-body">
+            <h4 class="page-title">Listagem de Contratos</h4>
+            <h5 class="page-subtitle">Digite para pesquisar</h5>
+            <!-- <div class="row mb-4">
+            <div class="col-md-6 col-lg-3 col-xl-3">
+              <form>
+                <input type="text" class="form-control" placeholder="Pesquisar..." (keyup)="updateFilter($event)" style="
+                    height: 40px;
+                    font-weight: bold;
+                    font-size: 16px;
+                    border: 1px solid #4545B2 !important;
+                  "/>
+              </form>
+            </div>
+             <div class="col-md-6 col-lg-9 col-xl-9 text-md-right mt-4 mt-md-0">
+              <button class="btn btn-lg btn-info text-white" (click)="goToAddPage()">
+                <i class="fa fa-plus-square mr-2"></i>Adicionar
+              </button>
+            </div>
+          </div> -->
+            <!-- <ng-container *ngIf="loading == true">
+            <div class="d-flex justify-content-center" style="padding-top: 15px; padding-bottom: 10px">
+              <div class="spinner-border text-info" role="status">
+                <span class="sr-only">Carregando...</span>
+              </div>
+            </div>
+          </ng-container> -->
+
+            <div class="list-background">
+                <div class="list-contracts">
+                    <div class="card-contract" *ngFor="let contract of temp">
+                        <div class="first-row-contract">
+                            <div class="card-title">
+                                CONTRATO DE COMPRA E VENDA DE MILHO
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+
+                        <div class="contract-body">
+                            <div class="card-subtitle">
+                                IDENTIFICAÇÃO DAS PARTES CONTRATANTES:
+                            </div>
+                            <div class="card-contratante">
+                                <span class="contratante-bold">CONTRATANTE</span>: João Carlos Silva, brasileiro(a),
+                                carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no
+                                CEP
+                                38021976, na cidade de Uberaba
+                            </div>
+                            <br>
+                            <div class="card-contratada">
+                                <span class="contratante-bold">CONTRATADA</span>: Rafael Andrade Santos, brasileiro(a),
+                                carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no
+                                CEP
+                                38071934, na cidade de Uberaba
+                            </div>
+
+                            <div class="action-buttons">
+                                <button class="see-contract">
+                                    Visualizar contrato completo
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="insurance-company-data"
+                            *ngIf="(contract.status==2 || contract.status==3) && contract.expand">
+                            <div class="card-subtitle">
+                                Dados da seguradora
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Nome:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        Porto Seguros
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Telefone:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        0800 3587-9614
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Data de assinatura:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        06/11/2022
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button class="recuse-contract">
+                                    Acionar a Seguradora
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="proposal-data" *ngIf="contract.expand">
+                            <div class="card-subtitle">
+                                Dados da proposta
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Valor do contrato:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        R$ 6784,00
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Período de vigência:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        Março/2023
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Porcentagem assegurada:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        50%
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="action-buttons" *ngIf="contract.status==1">
+
+                                <div class="buttons-actions">
+                                    <button class="accept-contract">
+                                        Recusar proposta
+                                    </button>
+
+                                    <button class="recuse-contract">
+                                        Aceitar proposta
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="action-buttons" *ngIf="contract.status!=1">
+                                <button class="accept-contract">
+                                    Verificar Cláusulas
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

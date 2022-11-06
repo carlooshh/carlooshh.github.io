@@ -1,3 +1,12 @@
+export const users = [
+  {
+    email: 'carlos@email.com.br',
+    password: '123456',
+    role: 'admin',
+  },
+  { email: 'joao@email.com.br', password: '123456', role: 'user' },
+];
+
 export const culturesMock = [
   {
     id: 101,

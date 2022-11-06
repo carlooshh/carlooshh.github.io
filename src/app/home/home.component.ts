@@ -8,6 +8,7 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -30,7 +31,6 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
   search(){
     console.log('nome-> '+ this.searchForm.controls['name'].value);
     console.log('phoneNumber-> '+ this.searchForm.controls['phoneNumber'].value);
@@ -42,4 +42,9 @@ export class HomeComponent implements OnInit {
     console.log('com data: '+Object.values(resp));
 
   }
+  ngOnInit(): void {
+    // localStorage.setItem('users', JSON.stringify(users));
+  }
+
+  goToLogin() {}
 }

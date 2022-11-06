@@ -1,6 +1,6 @@
 <div class="main-container">
-  <!-- <mat-spinner *ngIf="isLoading"></mat-spinner>
-  <mat-card *ngIf="!isLoading && !riskResult">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <mat-card *ngIf="!isLoading && riskResult.length == 0">
     <mat-card-content>
       <form [formGroup]="searchForm">
         <mat-form-field appearance="outline">
@@ -49,9 +49,9 @@
         </button>
       </form>
     </mat-card-content>
-  </mat-card> -->
+  </mat-card>
 
-  <mat-card>
+  <mat-card *ngIf="riskResult.length > 0">
     <div class="risk-data">Dados de risco climático</div>
     <mat-card-content>
       <div
@@ -72,24 +72,55 @@
           justify-content: center;
           margin-top: 12px;
           font-size: 36px;
+          color: red;
         "
         class="risk-data"
       >
         20%
       </div>
 
-      <div class="risk-data-label">Solo: <span>02/02/2022</span></div>
-      <div class="risk-data-label">Data: <span>02/02/2022</span></div>
-      <div class="risk-data-label">Data: <span>02/02/2022</span></div>
-      <div class="risk-data-label">Data: <span>02/02/2022</span></div>
-      <div class="risk-data-label">Data: <span>02/02/2022</span></div>
+      <div class="risk-data-label" style="padding-top: 12px">
+        Cultura:
+        <span class="risk-data-content">{{ riskResult[0].cultura }}</span>
+      </div>
+      <div class="risk-data-label">
+        Municipio:
+        <span class="risk-data-content"> {{ riskResult[0].municipio }}</span>
+      </div>
+      <div class="risk-data-label">
+        Solo: <span class="risk-data-content"> {{ riskResult[0].solo }}</span>
+      </div>
+      <div class="risk-data-label">
+        Safra:
+        <span class="risk-data-content"
+          >{{ riskResult[0].safraIni }}/{{ riskResult[0].safraFim }}</span
+        >
+      </div>
 
       <div class="risk-data-info">
-        Serviço informa a melhor janela de plantio baseado no Zoneamento para
-        riscos de 20%, 30% ou 40%. Este valor indica o risco de insucesso do
-        empreendimento pretendido de data indicada for selecionada.
+        Informação baseada no risco de insucesso do empreendimento preenchido
+        para riscos de 20%, 30% ou 40%.
       </div>
       <div></div>
     </mat-card-content>
+    <div>
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/login']"
+        (click)="goToLogin()"
+      >
+        Seja assegurado
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        style="margin-left: 8px"
+        (click)="goWhatsapp()"
+      >
+        Solicitar atendimento
+      </button>
+    </div>
   </mat-card>
 </div>

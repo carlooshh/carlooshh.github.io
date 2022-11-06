@@ -55,8 +55,8 @@ export class EmbrapaService {
         options
       )
       .toPromise()
-      .then((res) => {
-        return res;
+      .then((res: any) => {
+        return res.data;
       })
       .catch((err) => {
         return err;

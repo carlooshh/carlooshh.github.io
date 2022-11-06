@@ -111,23 +111,23 @@
         "
         class="risk-data"
       >
-        20%
+      {{ riskResult[0].risco }}%
       </div>
 
       <div class="risk-data-label" style="padding-top: 12px">
         Cultura:
-        <span class="risk-data-content">{{ riskResult[0].cultura }}</span>
+        <span class="risk-data-content" style="color: black;">{{ riskResult[0].cultura }}</span>
       </div>
       <div class="risk-data-label">
         Municipio:
-        <span class="risk-data-content"> {{ riskResult[0].municipio }}</span>
+        <span class="risk-data-content" style="color: black;"> {{ riskResult[0].municipio }}</span>
       </div>
       <div class="risk-data-label">
-        Solo: <span class="risk-data-content"> {{ riskResult[0].solo }}</span>
+        Solo: <span class="risk-data-content" style="color: black;"> {{ riskResult[0].solo }}</span>
       </div>
       <div class="risk-data-label">
         Safra:
-        <span class="risk-data-content"
+        <span class="risk-data-content" style="color: black;"
           >{{ riskResult[0].safraIni }}/{{ riskResult[0].safraFim }}</span
         >
       </div>

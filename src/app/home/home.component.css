@@ -1,3 +1,12 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #240b5b;
+}
+
 mat-card {
   display: flex;
   flex-direction: column;
@@ -27,4 +36,15 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.coluna_container{
+  max-width: 95%;
+  padding: 0%;
+  justify-content: center;
+  width: 100%;
+  padding: 0%;
+}
+h3{
+  justify-content: start;
 }

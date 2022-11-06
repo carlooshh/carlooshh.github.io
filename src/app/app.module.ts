@@ -1,3 +1,4 @@
+import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +22,7 @@ import {MatInputModule} from '@angular/material/input';
     ReactiveFormsModule,
     MatCardModule,
     MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

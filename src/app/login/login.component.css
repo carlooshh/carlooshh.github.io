@@ -5,6 +5,7 @@
   align-items: center;
   height: 100vh;
   background-color: #240b5b;
+  background-image: 'src/assets/fundoHome.jpg';
 }
 
 mat-card {

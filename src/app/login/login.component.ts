@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { users } from '../shared/mock';
 
 @Component({
   selector: 'app-login',
@@ -22,5 +23,17 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit() {}
+  onSubmit() {
+    const { email, password } = this.loginForm.value;
+
+    const user = users.find((user) => user.email === email);
+    if (user && user.password === password) {
+      console.log('Login successful');
+    } else {
+      console.log('new user successful');
+      const newUser = { email, password, role: 'user' };
+      users.push(newUser);
+      localStorage.setItem('users', JSON.stringify(users));
+    }
+  }
 }

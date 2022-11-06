@@ -56,7 +56,6 @@ export class EmbrapaService {
       )
       .toPromise()
       .then((res) => {
-        console.log('GET RISKS', res);
         return res;
       })
       .catch((err) => {

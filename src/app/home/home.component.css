@@ -38,13 +38,31 @@ form {
   align-items: center;
 }
 
-.coluna_container{
+.coluna_container {
   max-width: 95%;
   padding: 0%;
   justify-content: center;
   width: 100%;
   padding: 0%;
 }
-h3{
+h3 {
   justify-content: start;
+}
+
+.risk-data {
+  font-family: "Mulish";
+  font-size: 2rem;
+}
+
+.risk-data-info {
+  margin-top: 16px;
+  font-family: "Mulish";
+  font-size: 0.6rem;
+  color: #545454;
+  letter-spacing: 0.25px;
+}
+
+.risk-data-label {
+  margin-top: 4px;
+  font-family: "Mulish";
 }

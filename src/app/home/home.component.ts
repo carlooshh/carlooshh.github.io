@@ -17,7 +17,9 @@ export class HomeComponent implements OnInit {
   searchForm: FormGroup;
   cultures = culturesMock;
   city = citiesMock;
-  auxiliar = {};
+  isLoading = false;
+  riskResult = null;
+
   constructor(
     private _fb: FormBuilder,
     private embrapaService: EmbrapaService
@@ -31,13 +33,15 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  search() {
-    let resp = this.embrapaService.getRisks(
+  async search() {
+    this.isLoading = true;
+    this.riskResult = await this.embrapaService.getRisks(
       this.searchForm.controls['culture'].value,
       this.searchForm.controls['city'].value
     );
-    console.log('sem data: ' + resp);
-    console.log('com data: ' + Object.values(resp));
+
+    console.log(this.riskResult);
+    this.isLoading = false;
   }
   ngOnInit(): void {
     localStorage.setItem('users', JSON.stringify(users));

@@ -43,6 +43,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     localStorage.setItem('users', JSON.stringify(users));
   }
+  scrollForm(){
+    const element = document.getElementById('formSearch');
+    element?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
 
   goToLogin() {
     this.router.navigate(['login']);

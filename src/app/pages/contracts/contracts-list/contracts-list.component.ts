@@ -37,4 +37,8 @@ export class ContractsListComponent implements OnInit {
   switchExpand(contract: any){
     contract.expand = !contract.expand;
   }
+
+  openPdf(){
+    window.open('https://www.gov.br/mre/pt-br/arquivos/documentos/licitacoes/coordenacao-geral-de-recursos-logisticos/contratotraducoesgrp.pdf', '_blank');
+  }
 }

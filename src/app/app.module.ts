@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { PageLayoutComponent } from './pages/page-layout/page-layout.component';
 import { ContractsListComponent } from './pages/contracts/contracts-list/contracts-list.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
@@ -37,6 +38,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
+    MatSidenavModule,
     MatProgressSpinnerModule,
   ],
   providers: [],

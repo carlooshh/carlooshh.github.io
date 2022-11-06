@@ -1,1 +1,61 @@
-<p>page-layout works!</p>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <div class="sidebar">
+            <div class="logo-sidebar">
+                <img src="assets\images/granto-logo-branco.svg" width="100px" />
+            </div>
+
+
+        </div>
+
+        <div>
+            <div href="javascript:void(0)" class="btn-want-know-riscs" style="background: #4545B2 !important">
+                <span class="material-icons" style="font-size: 14px !important;">shield</span>
+                <span class="hide-menu m-l-5">&nbsp; Riscos do meu plantio</span>
+            </div>
+        </div>
+
+        <div>
+            <div href="javascript:void(0)" class="option-menu">
+                <span class="material-icons" style="font-size: 19px">edit_document</span>
+                <span class="hide-menu m-l-5" style="display: flex;">&nbsp; Gerir meus contratos</span>
+            </div>
+        </div>
+        <!-- <nav>
+            <ul>
+                <li>
+                    <div class="user-profile d-flex no-block m-t-20">
+                      <div class="user-pic">
+                        <img
+                          src="assets/images/user1.jpg"
+                          alt="users"
+                          class="rounded-circle"
+                          width="40"
+                        />
+                      </div>
+                      <div
+                        class="dropdown user-content hide-menu m-l-10 overflow-inherit"
+                        ngbDropdown
+                        placement="bottom-right"
+                      >
+                        <div
+                        >
+                          <h5 class="m-b-0 user-name font-medium">
+                            Granto Seguros
+                          </h5>
+                          <span class="op-5 user-email">grantoSeguros@admin.com</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+        </nav> -->
+    </mat-drawer>
+
+    <mat-drawer-content style="margin-left: 250px">
+        <header class="header-page">
+
+        </header>
+        <app-contracts-list></app-contracts-list>
+    </mat-drawer-content>
+</mat-drawer-container>

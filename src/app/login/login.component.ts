@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { users } from '../shared/mock';
 
 @Component({
@@ -10,7 +11,7 @@ import { users } from '../shared/mock';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = Object.create(null);
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.createForm();
@@ -35,5 +36,7 @@ export class LoginComponent implements OnInit {
       users.push(newUser);
       localStorage.setItem('users', JSON.stringify(users));
     }
+
+    this.router.navigate(['page-layout']);
   }
 }

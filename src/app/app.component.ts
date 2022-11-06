@@ -7,11 +7,12 @@ import { EmbrapaService } from './services/embrapa.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'digital-green-frontend';
+  title: any = 'digital-green-frontend';
 
   constructor(private embrapaService: EmbrapaService) {}
 
-  ngOnInit() {
-    this.embrapaService.getCulturas();
+  async ngOnInit() {
+    this.title = await this.embrapaService.getCulturas();
+    console.log(this.title);
   }
 }

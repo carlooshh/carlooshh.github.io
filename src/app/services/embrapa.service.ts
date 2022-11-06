@@ -22,9 +22,11 @@ export class EmbrapaService {
       .toPromise()
       .then((res) => {
         console.log(res);
+        return 'success';
       })
       .catch((err) => {
         console.log(err);
+        return 'error';
       });
   }
 }

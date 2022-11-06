@@ -18,7 +18,7 @@
 
     {
         "id": 2,
-        "title" : "CONTRATO DE COMPRA E VENDA DE CAFÉ",
+        "title" : "CONTRATO DE COMPRA E VENDA DE SOJA",
         "status" : 3,
         "contratanteText" : "José Ricardo Magalhães, brasileiro(a), carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no CEP 38021976, na cidade de Patos de Minas",
         "contratadaText" : "Gabriel Marques Medina, brasileiro(a), carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no CEP 38071934, na cidade de Bambuí",
@@ -35,7 +35,7 @@
 
     {
         "id": 3,
-        "title" : "CONTRATO DE COMPRA E VENDA DE SOJA",
+        "title" : "CONTRATO DE COMPRA E VENDA DE SORGO",
         "status" : 1,
         "contratanteText" : "Carlos Eduardo Martins, brasileiro(a), carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no CEP 38021976, na cidade de Uberaba",
         "contratadaText" : "Elisete Marques Ribeiro, brasileiro(a), carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no CEP 38071934, na cidade de Uberaba",
@@ -52,7 +52,7 @@
 
     {
         "id": 4,
-        "title" : "CONTRATO DE COMPRA E VENDA DE SORGO",
+        "title" : "CONTRATO DE COMPRA E VENDA DE CAFÉ",
         "status" : 3,
         "contratanteText" : "Thiago Rodovaldo Fonseca, brasileiro(a), carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no CEP 38021976, na cidade de Uberaba",
         "contratadaText" : "Sebastião Contarin da Silva, brasileiro(a), carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no CEP 38071934, na cidade de Uberaba",
@@ -63,7 +63,7 @@
         "seguradoraId" : 1,
         "proposalValue" : "R$ 6784,00",
         "proposalPeriod" : "Dezembro/2022",
-        "expand": false,
+        "expand": true,
         "proposalPercent" : "50%"
     }
 ]

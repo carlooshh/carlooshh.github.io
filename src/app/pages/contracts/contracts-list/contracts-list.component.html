@@ -3,7 +3,6 @@
     <div class="card">
         <div class="card-body">
             <h4 class="page-title">Listagem de Contratos</h4>
-            <h5 class="page-subtitle">Digite para pesquisar</h5>
             <!-- <div class="row mb-4">
             <div class="col-md-6 col-lg-3 col-xl-3">
               <form>
@@ -34,7 +33,7 @@
                     <div class="card-contract" *ngFor="let contract of temp">
                         <div class="first-row-contract">
                             <div class="card-title">
-                                CONTRATO DE COMPRA E VENDA DE MILHO
+                                {{contract.title}}
                             </div>
 
                             <div>
@@ -47,28 +46,71 @@
                                 IDENTIFICAÇÃO DAS PARTES CONTRATANTES:
                             </div>
                             <div class="card-contratante">
-                                <span class="contratante-bold">CONTRATANTE</span>: João Carlos Silva, brasileiro(a),
-                                carteira de identidade n° MG-52.875.634, CPF n° 187.468.952-21, residente a domicílio no
-                                CEP
-                                38021976, na cidade de Uberaba
+                                <span class="contratante-bold">CONTRATANTE</span>: {{contract.contratanteText}}
                             </div>
                             <br>
                             <div class="card-contratada">
-                                <span class="contratante-bold">CONTRATADA</span>: Rafael Andrade Santos, brasileiro(a),
-                                carteira de identidade n° MG-42.802.498, CPF n° 742.305.967-14, residente a domicílio no
-                                CEP
-                                38071934, na cidade de Uberaba
+                                <span class="contratante-bold">CONTRATADA</span>: {{contract.contratadaText}}
+                            </div>
+
+                            <div class="card-subtitle" style="padding-top: 25px;">
+                                DADOS DA PROPOSTA
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Valor do contrato:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        {{contract.proposalValue}}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Período de vigência:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        {{contract.proposalPeriod}}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="insurance-company-datas">
+                                <div class="insurance-company-data-row">
+                                    <span class="label-insurance-company">
+                                        Porcentagem assegurada:
+                                    </span>
+                                    <span class="label-insurance-company">
+                                        {{contract.proposalPercent}}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="action-buttons">
+                                <button class="see-contract">
+                                    Visualizar contrato completo
+                                </button>
+                            </div> -->
+
+                            <div class="action-buttons" style="padding-top: 15px;" (click)="openPdf()">
+                                <button class="verify-contract">
+                                    Verificar Contrato
+                                </button>
                             </div>
 
                             <div class="action-buttons">
-                                <button class="see-contract">
-                                    Visualizar contrato completo
+                                <button class="acionate-contract">
+                                    Acionar a Seguradora
                                 </button>
                             </div>
                         </div>
 
 
-                        <div class="insurance-company-data"
+                        <!-- <div class="insurance-company-data"
                             *ngIf="(contract.status==2 || contract.status==3) && contract.expand">
                             <div class="card-subtitle">
                                 Dados da seguradora
@@ -108,13 +150,13 @@
                             </div>
 
                             <div class="action-buttons">
-                                <button class="recuse-contract">
+                                <button class="acionate-contract">
                                     Acionar a Seguradora
                                 </button>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="proposal-data" *ngIf="contract.expand">
+                        <!-- <div class="proposal-data" *ngIf="contract.expand">
                             <div class="card-subtitle">
                                 Dados da proposta
                             </div>
@@ -165,11 +207,11 @@
                                 </div>
                             </div>
                             <div class="action-buttons" *ngIf="contract.status!=1">
-                                <button class="accept-contract">
+                                <button class="verify-contract">
                                     Verificar Cláusulas
                                 </button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

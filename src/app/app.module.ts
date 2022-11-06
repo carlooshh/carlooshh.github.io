@@ -15,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { PageLayoutComponent } from './pages/page-layout/page-layout.component';
 import { ContractsListComponent } from './pages/contracts/contracts-list/contracts-list.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent, PageLayoutComponent, ContractsListComponent],
@@ -30,6 +32,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

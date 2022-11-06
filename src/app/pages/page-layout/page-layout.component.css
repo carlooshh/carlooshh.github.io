@@ -1,0 +1,42 @@
+.header-page{
+    background-color: #240B5B;
+    height: 60px;
+}
+
+.sidebar{
+    background-color: #1d0a49;
+    width: 250px;
+}
+
+.logo-sidebar{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.btn-want-know-riscs{
+    margin: 15px 10px 10px 10px;
+    height: 40px !important;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+
+    font-size: 16px;
+}
+
+.option-menu{
+    height: 38px !important;
+    color: #1d0a49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    border-radius: 2px;
+    border: 1px solid #1d0a49;
+
+}

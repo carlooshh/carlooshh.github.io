@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
       phoneNumber: '',
       email: '',
       city: '',
-      date:Date,
     });
   }
 

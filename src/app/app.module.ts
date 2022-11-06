@@ -16,7 +16,7 @@ import { PageLayoutComponent } from './pages/page-layout/page-layout.component';
 import { ContractsListComponent } from './pages/contracts/contracts-list/contracts-list.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule, MatSpinner } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [

@@ -18,15 +18,17 @@ export class EmbrapaService {
       },
     };
     return this.http
-      .get('https://api.cnptia.embrapa.br/agritec/v1/culturas', options)
+      .get(
+        'https://cors-anywhere.herokuapp.com/https://api.cnptia.embrapa.br/agritec/v1/culturas',
+        options
+      )
       .toPromise()
       .then((res) => {
-        console.log(res);
-        return 'success';
+        console.log('GET CULTURAS', res);
+        return res;
       })
       .catch((err) => {
-        console.log(err);
-        return 'error';
+        return err;
       });
   }
 }

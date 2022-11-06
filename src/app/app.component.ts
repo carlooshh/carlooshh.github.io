@@ -11,8 +11,5 @@ export class AppComponent implements OnInit {
 
   constructor(private embrapaService: EmbrapaService) {}
 
-  async ngOnInit() {
-    this.title = await this.embrapaService.getCulturas();
-    console.log(this.title);
-  }
+  async ngOnInit() {}
 }

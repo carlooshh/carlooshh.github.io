@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { culturesMock } from 'src/app/shared/mock';
-import { citiesMock } from 'src/app/shared/mock'
+import { culturesMock ,citiesMock , users} from 'src/app/shared/mock';
 import{ EmbrapaService } from 'src/app/services/embrapa.service'
 import {
   FormBuilder,
@@ -43,7 +42,7 @@ export class HomeComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    // localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('users', JSON.stringify(users));
   }
 
   goToLogin() {}
